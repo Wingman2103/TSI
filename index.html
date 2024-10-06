@@ -3,32 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная</title>
+    <title>Магазин Компьютерных Игр</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Добро пожаловать на наш сайт</h1>
+        <img src="images/logo.jpg" alt="Логотип" class="logo">
+        <h1>Магазин Компьютерных Игр</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Главная</a></li>
+                <li><a href="#home">Главная</a></li>
                 <li><a href="catalog.html">Каталог</a></li>
-                <li><a href="product.html">Товар</a></li>
+                <li><a href="cart.html">Корзина</a></li> <!-- Добавленная ссылка на корзину -->
+                <li><a href="faq.html">FAQ</a></li> <!-- Новая ссылка на FAQ -->
+                <li><a href="#contact">Контакты</a></li>
             </ul>
         </nav>
+
+        <form action="search.html" method="get" class="search-form">
+            <input type="text" name="query" placeholder="Поиск по играм..." required>
+            <button type="submit">Поиск</button>
+        </form>
+
     </header>
-    <main>
-        <section>
-            <h2>О нас</h2>
-            <p>Мы - компания, предлагающая широкий ассортимент товаров для вашего дома и семьи. Наша цель - предоставить качественную продукцию по доступным ценам. Мы гордимся тем, что наше обслуживание клиентов находится на высшем уровне.</p>
-        </section>
-        <section>
-            <h2>Наши услуги</h2>
-            <p>Мы предлагаем различные услуги, включая доставку на дом, индивидуальные консультации и много другое. Наша команда профессионалов всегда готова помочь вам с выбором товаров, соответствующих вашим потребностям.</p>
-        </section>
-    </main>
+
+    <section id="home">
+        <h2>Добро пожаловать в наш магазин!</h2>
+        <p>Здесь вы найдете лучшие компьютерные игры по самым низким ценам!</p>
+    </section>
+
+    <section id="games">
+        <h2>Наши Игры</h2>
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="game">
+                            <img src="images\game1.png" alt="Игра 1">
+                            <h3>Игра 1</h3>
+                            <p>Описание игры 1. Цена: 500 руб.</p>
+                            <button>Купить</button>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="game">
+                            <img src="game2.jpg" alt="Игра 2">
+                            <h3>Игра 2</h3>
+                            <p>Описание игры 2. Цена: 700 руб.</p>
+                            <button>Купить</button>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="game">
+                            <img src="game3.jpg" alt="Игра 3">
+                            <h3>Игра 3</h3>
+                            <p>Описание игры 3. Цена: 600 руб.</p>
+                            <button>Купить</button>
+                        </div>
+                    </td>
+            </tbody>
+        </table>
+    </section>
+    
+
     <footer>
-        <p>&copy; 2024 Наша компания. Все права защищены.</p>
+        <h2 id="contact">Контакты</h2>
+        <p>Email: support@gamesstore.com</p>
+        <p>Телефон: +7 (123) 456-78-90</p>
     </footer>
 </body>
 </html>
