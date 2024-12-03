@@ -130,3 +130,31 @@ footer {
     width: 30px;
     height: 30px;
 }
+
+.image-container {
+    position: relative; /* Для размещения дочерних элементов относительно контейнера */
+    display: inline-block;
+    margin: 5px;
+}
+
+ /* Маленькое изображение */
+.image-container img.thumbnail {
+    display: block;
+    width: 200px; /* Размеры маленького изображения */
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Лупа */
+.image-container img.zoom-icon {
+    position: absolute; /* Абсолютное позиционирование */
+    top: 5px; /* Отступ сверху */
+    right: 5px; /* Отступ справа */
+    width: 30px; /* Размер пиктограммы */
+    height: 30px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.8); /* Белый фон с прозрачностью */
+    border-radius: 50%; /* Круглая пиктограмма */
+    padding: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Лёгкая тень */
+}

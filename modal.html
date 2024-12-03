@@ -3,8 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Модальное окно с несколькими изображениями</title>
+    <title>Лупа в углу изображения</title>
     <style>
+        /* Общий стиль для контейнера */
+        .image-container {
+            position: relative; /* Для размещения дочерних элементов относительно контейнера */
+            display: inline-block;
+            margin: 10px;
+        }
+
+        /* Маленькое изображение */
+        .image-container img.thumbnail {
+            display: block;
+            width: 200px; /* Размеры маленького изображения */
+            height: auto;
+            border-radius: 5px;
+        }
+
+        /* Лупа */
+        .image-container img.zoom-icon {
+            position: absolute; /* Абсолютное позиционирование */
+            top: 5px; /* Отступ сверху */
+            right: 5px; /* Отступ справа */
+            width: 30px; /* Размер пиктограммы */
+            height: 30px;
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0.8); /* Белый фон с прозрачностью */
+            border-radius: 50%; /* Круглая пиктограмма */
+            padding: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Лёгкая тень */
+        }
+
         /* Стили для модального окна */
         .modal {
             display: none;
@@ -35,32 +64,20 @@
             cursor: pointer;
             font-weight: bold;
         }
-
-        /* Стили для лупы */
-        .zoom-icon {
-            cursor: pointer;
-            width: 30px;
-            height: 30px;
-        }
-
-        .image-container {
-            display: inline-block;
-            margin: 10px;
-        }
     </style>
 </head>
 <body>
     <h1>Галерея изображений</h1>
     <div class="image-container">
-        <img src="small-image1.jpg" alt="Маленькое изображение 1" class="thumbnail" style="width: 200px;">
+        <img src="small-image1.jpg" alt="Маленькое изображение 1" class="thumbnail">
         <img src="magnifier-icon.png" alt="Лупа" class="zoom-icon" data-large="large-image1.jpg">
     </div>
     <div class="image-container">
-        <img src="small-image2.jpg" alt="Маленькое изображение 2" class="thumbnail" style="width: 200px;">
+        <img src="small-image2.jpg" alt="Маленькое изображение 2" class="thumbnail">
         <img src="magnifier-icon.png" alt="Лупа" class="zoom-icon" data-large="large-image2.jpg">
     </div>
     <div class="image-container">
-        <img src="small-image3.jpg" alt="Маленькое изображение 3" class="thumbnail" style="width: 200px;">
+        <img src="small-image3.jpg" alt="Маленькое изображение 3" class="thumbnail">
         <img src="magnifier-icon.png" alt="Лупа" class="zoom-icon" data-large="large-image3.jpg">
     </div>
 
