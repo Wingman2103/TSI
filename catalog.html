@@ -1,34 +1,73 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Каталог</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог</title>
+  <link rel="stylesheet" href="css\catalog_styles.css">
 </head>
 <body>
-    <header>
-        <h1>Наш Каталог</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="catalog.html">Каталог</a></li>
-                <li><a href="product.html">Товар</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h2>Популярные категории</h2>
-            <p>В нашем каталоге вы найдете разнообразные категории товаров, включая электронику, одежду, мебель и многое другое. Мы постоянно обновляем наш ассортимент, чтобы предложить вам самые актуальные товары на рынке.</p>
-        </section>
-        <section>
-            <h2>Как сделать заказ</h2>
-            <p>Чтобы сделать заказ, просто выберите нужный товар, добавьте его в корзину и следуйте инструкциям на экране. Мы предлагаем несколько способов оплаты и быструю доставку, чтобы ваш опыт покупок был максимально удобным.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Наша компания. Все права защищены.</p>
-    </footer>
+  <header class="header">
+    <div class="logo">Логотип</div>
+    <div class="banner">Баннер</div>
+  </header>
+
+  <main class="main">
+    <aside class="sidebar">
+      <div class="categories-title">Категории &#x25B6;</div>
+      <ul class="categories-list">
+        <li>Игры</li>
+        <li>Скины</li>
+        <li>Дополнения</li>
+        <li>Скоро</li>
+        <li>Игровая валюта</li>
+      </ul>
+    </aside>
+
+    <section class="products">
+      <div class="product">
+        <div class="product-photo">
+          <img id="main-image-1" src="https://via.placeholder.com/100" alt="Фото товара">
+        </div>
+        <div class="thumbnails">
+          <img class="thumbnail" src="https://via.placeholder.com/50" alt="Миниатюра 1" data-src="https://via.placeholder.com/100">
+          <img class="thumbnail" src="https://via.placeholder.com/50/ff0000" alt="Миниатюра 2" data-src="https://via.placeholder.com/100/ff0000">
+          <img class="thumbnail" src="https://via.placeholder.com/50/00ff00" alt="Миниатюра 3" data-src="https://via.placeholder.com/100/00ff00">
+        </div>
+        <div class="product-description">Описание</div>
+        <div class="product-price">Цена</div>
+        <button class="add-to-cart">Добавить в корзину</button>
+      </div>
+
+      <div class="product">
+        <div class="product-photo">
+          <img id="main-image-2" src="https://via.placeholder.com/100" alt="Фото товара">
+        </div>
+        <div class="thumbnails">
+          <img class="thumbnail" src="https://via.placeholder.com/50" alt="Миниатюра 1" data-src="https://via.placeholder.com/100">
+          <img class="thumbnail" src="https://via.placeholder.com/50/0000ff" alt="Миниатюра 2" data-src="https://via.placeholder.com/100/0000ff">
+          <img class="thumbnail" src="https://via.placeholder.com/50/ffff00" alt="Миниатюра 3" data-src="https://via.placeholder.com/100/ffff00">
+        </div>
+        <div class="product-description">Описание</div>
+        <div class="product-price">Цена</div>
+        <button class="add-to-cart">Добавить в корзину</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="social-icons">
+      <div class="icon">VK</div>
+      <div class="icon">Telegram</div>
+      <div class="icon">GitHub</div>
+    </div>
+    <button class="footer-logo">Логотип</button>
+    <nav class="footer-nav">
+      <a href="#">FAQ</a>
+      <a href="#">Контакты</a>
+    </nav>
+  </footer>
+
+  <script src="js\catalog.js"></script>
 </body>
 </html>

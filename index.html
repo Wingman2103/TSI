@@ -4,19 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Магазин Компьютерных Игр</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css\styles.css">
 </head>
 <body>
     <header>
         <img src="images/logo.jpg" alt="Логотип" class="logo">
-        <h1>Магазин Компьютерных Игр</h1>
+        <h1>WINGMAN SHOP</h1>
         <nav>
             <ul>
                 <li><a href="#home">Главная</a></li>
                 <li><a href="catalog.html">Каталог</a></li>
-                <li><a href="cart.html">Корзина</a></li> <!-- Добавленная ссылка на корзину -->
-                <li><a href="faq.html">FAQ</a></li> <!-- Новая ссылка на FAQ -->
+                <li><a href="cart.html">Корзина</a></li>
+                <li><a href="add_product.html">Добавить товар</a></li>
+                <li><a href="faq.html">FAQ</a></li>
                 <li><a href="#contact">Контакты</a></li>
+                <li><a href="modal.html">modal</a></li>
             </ul>
         </nav>
 
@@ -32,14 +34,21 @@
         <p>Здесь вы найдете лучшие компьютерные игры по самым низким ценам!</p>
     </section>
 
+    <div class="modal" id="imageModal">
+        <span class="close" id="closeModal">&times;</span>
+        <img id="modalImage" src="" alt="Увеличенное изображение">
+    </div>
+
     <section id="games">
         <h2>Наши Игры</h2>
-        <table>
+        <table id="gamesTable">
             <tbody>
+                <!-- Первая строка -->
                 <tr>
                     <td>
                         <div class="game">
-                            <img src="images\game1.png" alt="Игра 1">
+                            <img src="images/game1.png" alt="Игра 1">
+                            <img src="magnifier-icon.png" alt="Лупа" class="zoom-icon" id="zoomIcon" data-large="images/game1.png">
                             <h3>Игра 1</h3>
                             <p>Описание игры 1. Цена: 500 руб.</p>
                             <button>Купить</button>
@@ -47,7 +56,7 @@
                     </td>
                     <td>
                         <div class="game">
-                            <img src="game2.jpg" alt="Игра 2">
+                            <img src="images/game2.jpg" alt="Игра 2">
                             <h3>Игра 2</h3>
                             <p>Описание игры 2. Цена: 700 руб.</p>
                             <button>Купить</button>
@@ -55,16 +64,127 @@
                     </td>
                     <td>
                         <div class="game">
-                            <img src="game3.jpg" alt="Игра 3">
+                            <img src="images/game3.jpg" alt="Игра 3">
                             <h3>Игра 3</h3>
                             <p>Описание игры 3. Цена: 600 руб.</p>
                             <button>Купить</button>
                         </div>
                     </td>
+                </tr>
+                <!-- Вторая строка -->
+                <tr>
+                    <td>
+                        <div class="game">
+                            <img src="images/game4.jpg" alt="Игра 4">
+                            <h3>Игра 4</h3>
+                            <p>Описание игры 4. Цена: 550 руб.</p>
+                            <button>Купить</button>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="game">
+                            <img src="images/game5.jpg" alt="Игра 5">
+                            <h3>Игра 5</h3>
+                            <p>Описание игры 5. Цена: 800 руб.</p>
+                            <button>Купить</button>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="game">
+                            <img src="images/game6.jpg" alt="Игра 6">
+                            <h3>Игра 6</h3>
+                            <p>Описание игры 6. Цена: 650 руб.</p>
+                            <button>Купить</button>
+                        </div>
+                    </td>
+                </tr>
+                <!-- Третья строка -->
+                <tr>
+                    <td>
+                        <div class="game">
+                            <img src="images/game7.jpg" alt="Игра 7">
+                            <h3>Игра 7</h3>
+                            <p>Описание игры 7. Цена: 750 руб.</p>
+                            <button>Купить</button>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="game">
+                            <img src="images/game8.jpg" alt="Игра 8">
+                            <h3>Игра 8</h3>
+                            <p>Описание игры 8. Цена: 900 руб.</p>
+                            <button>Купить</button>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="game">
+                            <img src="images/game9.jpg" alt="Игра 9">
+                            <h3>Игра 9</h3>
+                            <p>Описание игры 9. Цена: 850 руб.</p>
+                            <button>Купить</button>
+                        </div>
+                    </td>
+                </tr>
+                <!-- Четвертая строка -->
+                <tr>
+                    <td>
+                        <div class="game">
+                            <img src="images/game10.jpg" alt="Игра 10">
+                            <h3>Игра 10</h3>
+                            <p>Описание игры 10. Цена: 550 руб.</p>
+                            <button>Купить</button>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="game">
+                            <img src="images/game11.jpg" alt="Игра 11">
+                            <h3>Игра 11</h3>
+                            <p>Описание игры 11. Цена: 720 руб.</p>
+                            <button>Купить</button>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="game">
+                            <img src="images/game12.jpg" alt="Игра 12">
+                            <h3>Игра 12</h3>
+                            <p>Описание игры 12. Цена: 600 руб.</p>
+                            <button>Купить</button>
+                        </div>
+                    </td>
+                </tr>
+                <!-- Пятая строка -->
+                <tr>
+                    <td>
+                        <div class="game">
+                            <img src="images/game13.jpg" alt="Игра 13">
+                            <h3>Игра 13</h3>
+                            <p>Описание игры 13. Цена: 800 руб.</p>
+                            <button>Купить</button>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="game">
+                            <img src="images/game14.jpg" alt="Игра 14">
+                            <h3>Игра 14</h3>
+                            <p>Описание игры 14. Цена: 950 руб.</p>
+                            <button>Купить</button>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="game">
+                            <img src="images/game15.jpg" alt="Игра 15">
+                            <h3>Игра 15</h3>
+                            <p>Описание игры 15. Цена: 670 руб.</p>
+                            <button>Купить</button>
+                        </div>
+                    </td>
+                </tr>
             </tbody>
         </table>
-    </section>
-    
+    </section>    
+
+    <button id="scrollTop" title="Наверх">↑</button>
+    <script src="js\main.js"></script>
 
     <footer>
         <h2 id="contact">Контакты</h2>

@@ -1,0 +1,135 @@
+/* Общие стили */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  .header, .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #d3d3d3;
+    padding: 10px 20px;
+  }
+  
+  .header .logo, .footer .footer-logo {
+    background-color: #b0b0b0;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .banner {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 24px;
+  }
+  
+  /* Основной контент */
+  .main {
+    display: flex;
+    margin: 20px;
+  }
+  
+  .sidebar {
+    width: 200px;
+    background-color: #e0e0e0;
+    padding: 10px;
+  }
+  
+  .categories-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .categories-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .categories-list li {
+    margin: 10px 0;
+    background-color: #c0c0c0;
+    padding: 5px;
+  }
+  
+  /* Продукты */
+  .products {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 20px;
+  }
+  
+  .product {
+    display: flex;
+    flex-direction: column;
+    background-color: #d3d3d3;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-photo img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+  
+  .thumbnails {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .thumbnail {
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s;
+  }
+  
+  .thumbnail:hover {
+    border-color: #000;
+  }
+  
+  .product-description, .product-price {
+    margin-top: 10px;
+  }
+  
+  .add-to-cart {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: 1px solid #000;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  
+  /* Футер */
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .icon {
+    width: 40px;
+    height: 40px;
+    background-color: #a0a0a0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+  
+  .footer-nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #000;
+  }
