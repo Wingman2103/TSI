@@ -35,9 +35,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const newCell = document.createElement('td');
         newCell.innerHTML = `
             <div class="game">
-                <img src="${product.image}" alt="${product.name}" style="width: 100px; height: auto;">
+                <div class="image-container">
+                    <img src="${product.image}" alt="${product.name}" class="thumbnail">
+                </div>
                 <h3>${product.name}</h3>
-                <p>Описание: ${product.description} Цена: ${product.price} руб.</p>
+                <p>Описание: ${product.description}
+                Цена: ${product.price} руб.</p>
                 <button>Купить</button>
             </div>
         `;
@@ -84,5 +87,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (event.target === modal) {
             modal.style.display = 'none';
         }
+    });
+});
+
+document.querySelectorAll('.game').forEach(game => {
+    game.addEventListener('click', function () {
+        const url = this.dataset.url; // Получить URL из атрибута data-url
+        window.location.href = url;
     });
 });

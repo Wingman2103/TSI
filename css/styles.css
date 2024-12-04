@@ -37,11 +37,16 @@ section {
 
 .game {
     margin: 20px 0;
+    
 }
 
 .game img {
     width: 200px;
     height: 150px;
+}
+
+.game p {
+    white-space: pre-line;
 }
 
 footer {
@@ -140,7 +145,8 @@ footer {
  /* Маленькое изображение */
 .image-container img.thumbnail {
     display: block;
-    width: 200px; /* Размеры маленького изображения */
+    width: 400px; /* Размеры маленького изображения */
+    height: 300px;
     height: auto;
     border-radius: 5px;
 }
