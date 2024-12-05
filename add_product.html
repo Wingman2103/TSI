@@ -7,8 +7,27 @@
     <link rel="stylesheet" href="css\add_product.css">
 </head>
 <body>
+    <header>
+        <img src="images/logo.jpg" alt="Логотип" class="logo">
+        <h1>ДОБАВЛЕНИЕ ТОВАРА</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="cart.html">Корзина</a></li>
+                <li><a href="add_product.html">Добавить товар</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="about.html">Об авторе</a></li>
+            </ul>
+        </nav>
+            <form action="search.html" method="get" class="search-form">
+                <input type="text" name="query" placeholder="Поиск по играм..." required>
+                <button type="submit" id="buttonSearch">Поиск</button>
+            </form> 
+    
+    </header>
     <div class="form-container">
-        <h1>«Добавление товара»</h1>
+        <h1>«Форма добавления товара»</h1>
         <form id="addProductForm">
             <label for="name">Наименование *</label>
             <input type="text" id="name" name="name" required>
@@ -58,8 +77,12 @@
             
             <button type="submit">Добавить товар</button>
         </form>
-        <button id="backButton">Назад на главную</button>
     </div>
+    <footer>
+        <h2 id="contact">Контакты</h2>
+        <p>Email: support@wingmanstore.com</p>
+        <p>Телефон: +7 (123) 456-78-90</p>
+    </footer>
     <script src="js\add_product.js"></script>
 </body>
 </html>

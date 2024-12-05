@@ -4,45 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Корзина</title>
-    <link rel="stylesheet" href="css\styles.css">
+    <link rel="stylesheet" href="css\cart.css">
 </head>
 <body>
     <header>
-        <h1>Корзина</h1>
+        <img src="images/logo.jpg" alt="Логотип" class="logo">
+        <h1>КОРЗИНА</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Главная</a></li>
+                <li><a href="#home">Главная</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
                 <li><a href="cart.html">Корзина</a></li>
+                <li><a href="add_product.html">Добавить товар</a></li>
+                <li><a href="faq.html">FAQ</a></li>
                 <li><a href="about.html">Об авторе</a></li>
             </ul>
         </nav>
+
+        <form action="search.html" method="get" class="search-form">
+            <input type="text" name="query" placeholder="Поиск по играм..." required>
+            <button type="submit">Поиск</button>
+        </form>
+
     </header>
 
-    <section id="cart">
-        <h2>Ваши товары в корзине</h2>
-        <div class="cart-item">
-            <h3>Игра 1</h3>
-            <p>Цена: 500 руб.</p>
-            <button>Удалить</button>
+    <section class="product-list">
+        <h2>ВАШИ ТОВАРЫ В КОРЗИНЕ</h2>
+        <div class="game" data-url="products/product1.html">
+            <img src="images/product1_1.jpg" alt="Игра 1" class="game-thumbnail">
+            <div class="game-info">
+                <h3>Игра 1</h3>
+                <p>Описание игры 1. Цена: 500 руб.</p>
+                <p><strong>Жанр:</strong> Экшен, Приключения</p>
+            </div>
+            <button class="buy-button">Удалить из корзины</button>
         </div>
-        <div class="cart-item">
-            <h3>Игра 2</h3>
-            <p>Цена: 700 руб.</p>
-            <button>Удалить</button>
+        <div class="game">
+            <img src="images/product1_3.jpg" alt="Игра 2" class="game-thumbnail">
+            <div class="game-info">
+                <h3>Игра 2</h3>
+                <p>Описание игры 2. Цена: 700 руб.</p>
+                <p><strong>Жанр:</strong> РПГ</p>
+            </div>
+            <button class="buy-button">Удалить из корзины</button>
         </div>
-        <div class="cart-item">
-            <h3>Игра 3</h3>
-            <p>Цена: 600 руб.</p>
-            <button>Удалить</button>
+        <div class="game">
+            <img src="images/product1_4.jpg" alt="Игра 3" class="game-thumbnail">
+            <div class="game-info">
+                <h3>Игра 3</h3>
+                <p>Описание игры 3. Цена: 600 руб.</p>
+                <p><strong>Жанр:</strong> Стратегии</p>
+            </div>
+            <button class="buy-button">Удалить из корзины</button>
         </div>
-        <h3>Итого: 1800 руб.</h3>
-        <button>Оформить заказ</button>
     </section>
-
     <footer>
         <h2 id="contact">Контакты</h2>
-        <p>Email: support@gamesstore.com</p>
+        <p>Email: support@wingmanstore.com</p>
         <p>Телефон: +7 (123) 456-78-90</p>
     </footer>
+    
 </body>
+
 </html>

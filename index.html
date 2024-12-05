@@ -27,7 +27,7 @@
         </form>
 
     </header>
-
+    <main>
     <section id="home">
         <h2>Добро пожаловать в наш магазин!</h2>
         <p>Здесь вы найдете лучшие компьютерные игры по самым низким ценам!</p>
@@ -53,16 +53,16 @@
                             <h3>GTA V</h3>
                             <p>Шутер, мультиплеер.
                                 Цена: 1000 руб.</p>
-                            <button>Купить</button>
+                            <button class="buy-button" data-product='{"name": "GTA V", "price": 1000}'>Купить</button>
                         </div>
                         
                     </td>
                     <td>
-                        <div class="game">
+                        <div class="game" data-url="products/product2.html">
                             <img src="images/game2.jpg" alt="Игра 2">
-                            <h3>Игра 2</h3>
-                            <p>Описание игры 2. Цена: 700 руб.</p>
-                            <button>Купить</button>
+                            <h3>Minecraft</h3>
+                            <p>Описание игры 2. Цена: 2000 руб.</p>
+                            <button class="buy-button" data-product='{"name": "Minecraft", "price": 2000}'>Купить</button>
                         </div>
                     </td>
                     <td>
@@ -101,44 +101,18 @@
                         </div>
                     </td>
                 </tr>
-                <!-- Третья строка -->
-                <tr>
-                    <td>
-                        <div class="game">
-                            <img src="images/game7.jpg" alt="Игра 7">
-                            <h3>Игра 7</h3>
-                            <p>Описание игры 7. Цена: 750 руб.</p>
-                            <button>Купить</button>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game">
-                            <img src="images/game8.jpg" alt="Игра 8">
-                            <h3>Игра 8</h3>
-                            <p>Описание игры 8. Цена: 900 руб.</p>
-                            <button>Купить</button>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="game">
-                            <img src="images/game9.jpg" alt="Игра 9">
-                            <h3>Игра 9</h3>
-                            <p>Описание игры 9. Цена: 850 руб.</p>
-                            <button>Купить</button>
-                        </div>
-                    </td>
-                </tr>
+                
             </tbody>
         </table>
     </section>    
 
     <button id="scrollTop" title="Наверх">↑</button>
     <script src="js\main.js"></script>
-
-    <footer>
-        <h2 id="contact">Контакты</h2>
-        <p>Email: support@wingmanstore.com</p>
-        <p>Телефон: +7 (123) 456-78-90</p>
-    </footer>
+</main>
 </body>
+<footer>
+    <h2 id="contact">Контакты</h2>
+    <p>Email: support@wingmanstore.com</p>
+    <p>Телефон: +7 (123) 456-78-90</p>
+</footer>
 </html>

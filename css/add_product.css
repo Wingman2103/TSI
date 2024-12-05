@@ -5,6 +5,53 @@ body {
     background-color: #f5f5f5;
 }
 
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+  
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+  
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+  
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+  
+.logo {
+    width: 100px; /* Устанавливаем ширину логотипа */
+    height: 100px; /* Автоматическая высота для сохранения пропорций */
+    position: absolute; /* Позиционирование для размещения в углу */
+    top: 10px; /* Отступ сверху */
+    left: 10px; /* Отступ слева */
+}
+
+.search-form {
+    display: inline-block;
+    margin-left: 20px;
+}
+  
+.search-form input[type="text"] {
+    padding: 5px;
+    width: 300px;
+    font-size: 16px;
+}
+  
+#buttonSearch {
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
 .form-container {
     max-width: 600px;
     margin: 50px auto;
@@ -14,23 +61,23 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
+.form-container h1 {
     text-align: center;
     color: #333;
 }
 
-form {
+.form-container form {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-label {
+.form-container label {
     font-weight: bold;
     color: #555;
 }
 
-input, select, textarea, button {
+.form-container input, select, textarea, button {
     font-size: 16px;
     padding: 10px;
     border: 1px solid #ddd;
@@ -39,18 +86,18 @@ input, select, textarea, button {
     box-sizing: border-box;
 }
 
-button {
+.form-container button {
     background-color: #4CAF50;
     color: white;
     border: none;
     cursor: pointer;
 }
 
-button:hover {
+.form-container button:hover {
     background-color: #45a049;
 }
 
-button#backButton {
+/* button#backButton {
     margin-top: 15px;
     background-color: #007BFF;
     color: white;
@@ -64,5 +111,13 @@ button#backButton {
 
 button#backButton:hover {
     background-color: #0056b3;
-}
+} */
 
+/* Футер */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto; /* Гарантирует, что футер переместится вниз */
+  }

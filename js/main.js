@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Показ кнопки "Наверх" при прокрутке вниз
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 400) {
+        if (window.scrollY > 250) {
             scrollTopButton.style.display = 'block';
         } else {
             scrollTopButton.style.display = 'none';
@@ -62,37 +62,26 @@ document.addEventListener('DOMContentLoaded', () => {
     products.forEach(product => addProductToTable(product));
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    const zoomIcons = document.querySelectorAll('.zoom-icon'); // Все пиктограммы луп
-    const modal = document.getElementById('imageModal');
-    const modalImage = document.getElementById('modalImage');
-    const closeModal = document.getElementById('closeModal');
-
-    // Навешиваем обработчик на каждую лупу
-    zoomIcons.forEach(icon => {
-        icon.addEventListener('click', () => {
-            const largeImageSrc = icon.getAttribute('data-large'); // Получаем путь к большому изображению
-            modalImage.src = largeImageSrc; // Устанавливаем его в модальное окно
-            modal.style.display = 'flex'; // Показываем модальное окно
-        });
-    });
-
-    // Закрытие модального окна
-    closeModal.addEventListener('click', () => {
-        modal.style.display = 'none';
-    });
-
-    // Закрытие при клике вне изображения
-    modal.addEventListener('click', (event) => {
-        if (event.target === modal) {
-            modal.style.display = 'none';
-        }
-    });
-});
-
 document.querySelectorAll('.game').forEach(game => {
     game.addEventListener('click', function () {
         const url = this.dataset.url; // Получить URL из атрибута data-url
         window.location.href = url;
+    });
+});
+
+// Обработчик для кнопок "Купить"
+document.querySelectorAll('.buy-button').forEach(button => {
+    button.addEventListener('click', function (event) {
+        event.stopPropagation(); // Остановить всплытие события, чтобы не активировался родительский клик
+
+        // Получение данных о товаре из кнопки
+        const product = JSON.parse(this.dataset.product);
+
+        // Добавление товара в корзину (localStorage)
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.push(product);
+        localStorage.setItem('cart', JSON.stringify(cart));
+
+        alert('Товар добавлен в корзину!');
     });
 });

@@ -11,3 +11,36 @@ thumbnails.forEach((thumbnail) => {
     mainImage.setAttribute("src", newSrc);
   });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const scrollTopButton = document.getElementById('scrollTop');
+  const contentDiv = document.querySelector('.content');
+
+
+  // Показ кнопки "Наверх" при прокрутке вниз
+  window.addEventListener('scroll', () => {
+      if (window.scrollY > 250) {
+          scrollTopButton.style.display = 'block';
+      } else {
+          scrollTopButton.style.display = 'none';
+      }
+  });
+
+  // Прокрутка вверх при нажатии на кнопку
+  scrollTopButton.addEventListener('click', () => {
+      window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+      });
+
+      localStorage.clear();
+      alert('localStorage очищен!');
+  });
+});
+
+document.querySelectorAll('.game').forEach(game => {
+  game.addEventListener('click', function () {
+      const url = this.dataset.url; // Получить URL из атрибута data-url
+      window.location.href = url;
+  });
+});

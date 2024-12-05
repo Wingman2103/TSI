@@ -49,12 +49,29 @@ section {
     white-space: pre-line;
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #333;
-    color: #fff;
+.buy-button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+.buy-button:hover {
+    background-color: #0056b3;
 }
+
+/* Футер */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto; /* Гарантирует, что футер переместится вниз */
+  }
+  
 
 .search-form {
     display: inline-block;
