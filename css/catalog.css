@@ -162,7 +162,7 @@ section {
   right: 20px;
   padding: 10px 15px;
   font-size: 20px;
-  background-color: #4CAF50;
+  background-color: #232423;
   color: white;
   border: none;
   border-radius: 50%;
@@ -170,7 +170,7 @@ section {
 }
 
 #scrollTop:hover {
-  background-color: #388E3C;
+  background-color: #1b1b1b;
 }
 
 /* Футер */

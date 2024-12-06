@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Показ кнопки "Наверх" при прокрутке вниз
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 400) {
+        if (window.scrollY > 200) {
             scrollTopButton.style.display = 'block';
         } else {
             scrollTopButton.style.display = 'none';

@@ -1,0 +1,17 @@
+#scrollTop {
+    display: none; /* По умолчанию скрыта */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    font-size: 20px;
+    background-color: #232423;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#scrollTop:hover {
+    background-color: #1b1b1b;
+}

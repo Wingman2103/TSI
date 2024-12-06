@@ -1,3 +1,27 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const scrollTopButton = document.getElementById('scrollTop');
+    // const contentDiv = document.querySelector('.content');
+
+
+    // Показ кнопки "Наверх" при прокрутке вниз
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 200) {
+            scrollTopButton.style.display = 'block';
+        } else {
+            scrollTopButton.style.display = 'none';
+        }
+    });
+
+    // Прокрутка вверх при нажатии на кнопку
+    scrollTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+
+    });
+});
+
 document.getElementById('addProductForm').addEventListener('submit', function (event) {
     event.preventDefault();
 
@@ -11,6 +35,7 @@ document.getElementById('addProductForm').addEventListener('submit', function (e
     const platform = document.getElementById('platform').value;
     const supplier = document.getElementById('supplier').value;
     const imageInput = document.getElementById('image');
+    const url = "products/product2.html";
     
     if (!name || !price || !quantity || !manufacturer || !category || !platform || !supplier || !imageInput.files.length) {
         alert('Пожалуйста, заполните все обязательные поля!');
@@ -34,7 +59,8 @@ document.getElementById('addProductForm').addEventListener('submit', function (e
             category,
             platform,
             supplier,
-            image: imageData // Содержимое изображения
+            image: imageData, // Содержимое изображения
+            url
         };
 
         // Сохраняем товар в localStorage
@@ -59,3 +85,4 @@ document.getElementById('addProductForm').addEventListener('submit', function (e
 document.getElementById('backButton').addEventListener('click', function () {
     window.location.href = 'index.html';
 });
+

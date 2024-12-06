@@ -27,41 +27,78 @@ nav ul li a {
     text-decoration: none;
 }
 
+
 section {
-    padding: 20px;
+    padding: 0; 
     margin: 20px;
     background: #fff;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
 }
 
-.game {
-    margin: 20px 0;
-    
+#H2 {
+    margin-left: 20px;
 }
 
-.game img {
-    width: 200px;
-    height: 150px;
+.games {
+    flex: 1; 
+    width: 100%;
+    overflow: auto; 
+}
+
+.table-container table {
+    width: 100%; 
+    height: 100%; 
+    border-collapse: collapse; 
+}
+
+.game h3 {
+    margin: 0;
+    font-size: 1.2rem;
 }
 
 .game p {
     white-space: pre-line;
+    margin: 0;
 }
 
 .buy-button {
     background-color: #007BFF;
     color: white;
     border: none;
+    margin: 10px;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.2s;
-  }
-  
+}
+
 .buy-button:hover {
     background-color: #0056b3;
 }
+
+
+.game {
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.game:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.game h3 {
+    margin: 10px;
+}
+
+.game p {
+    white-space: pre-line;
+    margin: 10px;
+}
+
 
 /* Футер */
 footer {
@@ -69,7 +106,7 @@ footer {
     color: white;
     text-align: center;
     padding: 20px 0;
-    margin-top: auto; /* Гарантирует, что футер переместится вниз */
+    margin-top: auto; 
   }
   
 
@@ -91,21 +128,21 @@ footer {
 }
 
 .logo {
-    width: 100px; /* Устанавливаем ширину логотипа */
-    height: 100px; /* Автоматическая высота для сохранения пропорций */
-    position: absolute; /* Позиционирование для размещения в углу */
-    top: 10px; /* Отступ сверху */
-    left: 10px; /* Отступ слева */
+    width: 100px;
+    height: 100px; 
+    position: absolute; 
+    top: 10px; 
+    left: 10px; 
 }
 
 #scrollTop {
-    display: none; /* По умолчанию скрыта */
+    display: none; 
     position: fixed;
     bottom: 20px;
     right: 20px;
     padding: 10px 15px;
     font-size: 20px;
-    background-color: #4CAF50;
+    background-color: #232423;
     color: white;
     border: none;
     border-radius: 50%;
@@ -113,11 +150,11 @@ footer {
 }
 
 #scrollTop:hover {
-    background-color: #388E3C;
+    background-color: #1b1b1b;
 }
 
 .modal {
-    display: none; /* Скрыто по умолчанию */
+    display: none; 
     position: fixed;
     top: 0;
     left: 0;
@@ -146,7 +183,7 @@ footer {
     font-weight: bold;
 }
 
-/* Стили для пиктограммы лупы */
+
 .zoom-icon {
     cursor: pointer;
     width: 30px;
@@ -154,30 +191,17 @@ footer {
 }
 
 .image-container {
-    position: relative; /* Для размещения дочерних элементов относительно контейнера */
+    position: relative; 
     display: inline-block;
     margin: 5px;
 }
 
- /* Маленькое изображение */
 .image-container img.thumbnail {
+    flex: 1;
+    width: 95%; 
+    object-fit: cover; 
+    margin: 15px;
     display: block;
-    width: 400px; /* Размеры маленького изображения */
-    height: 300px;
     height: auto;
     border-radius: 5px;
-}
-
-/* Лупа */
-.image-container img.zoom-icon {
-    position: absolute; /* Абсолютное позиционирование */
-    top: 5px; /* Отступ сверху */
-    right: 5px; /* Отступ справа */
-    width: 30px; /* Размер пиктограммы */
-    height: 30px;
-    cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.8); /* Белый фон с прозрачностью */
-    border-radius: 50%; /* Круглая пиктограмма */
-    padding: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Лёгкая тень */
 }

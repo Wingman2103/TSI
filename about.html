@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="css\about.css">
 </head>
 <body>
+    <main>
     <div class="about-container">
-        <!-- Шапка -->
+
         <div class="header">
             <img src="images\profile.jpg" alt="Фото автора" class="profile-pic">
         </div>
 
-        <!-- Основной контент -->
         <div class="about-content">
             <h1>Вигурский Владислав</h1>
             <h2>Веб-разработчик, Дизайнер и Автор</h2>
@@ -23,11 +23,9 @@
             </p>
             <a href="https://github.com/Wingman2103">Посмотреть портфолио</a>
 
-            <!-- Кнопка "Назад" -->
             <button class="back-button" onclick="goBack()">Назад</button>
         </div>
 
-        <!-- Дополнительная информация -->
         <div class="details">
             <div>
                 <h3>Контакты</h3>
@@ -41,19 +39,16 @@
             </div>
         </div>
 
-        
-
-        <!-- Подвал -->
         <div class="footer">
             &copy; 2024 Вигурский Владислав. Все права защищены.
         </div>
     </div>
-
+    
     <script>
         function goBack() {
             window.location.href = 'index.html';
         }
     </script>
-
+</main>
 </body>
 </html>
