@@ -39,6 +39,8 @@ document.addEventListener("DOMContentLoaded", function () {
             productListSection.innerHTML = `<h2>ВАШИ ТОВАРЫ В КОРЗИНЕ</h2>`;
         }
 
+        let totalPrice = 0;  // Переменная для хранения итоговой суммы
+
         cartItems.forEach((item, index) => {
             const gameElement = document.createElement('div');
             gameElement.classList.add('game');
@@ -54,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <button class="buy-button" data-index="${index}">Удалить из корзины</button>
             `;
             productListSection.appendChild(gameElement);
-            
+            totalPrice += item.price;
 
             productListSection.querySelectorAll('.game').forEach(game => {
                 game.addEventListener('click', function (event) {
@@ -65,6 +67,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
               });
         });
+
+        // Добавляем отображение итоговой суммы
+        const totalElement = document.createElement('div');
+        totalElement.classList.add('total-price');
+        totalElement.innerHTML = `
+            <h3>Итоговая сумма: ${totalPrice} руб.</h3>
+        `;
+        productListSection.appendChild(totalElement);
     }
 
     // Функция для удаления товара из корзины
