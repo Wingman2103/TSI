@@ -49,9 +49,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 <img src="${item.image}" alt="${item.name}" class="game-thumbnail">
                 <div class="game-info">
                     <h3>${item.name}</h3>
-                    <p>${item.description}</p>
-                    <p><strong>Цена:</strong> ${item.price} руб.</p>
                     <p><strong>Жанр:</strong> ${item.genres.join(', ')}</p>
+                    <p><strong>Цена:</strong> ${item.price} руб.</p>
                 </div>
                 <button class="buy-button" data-index="${index}">Удалить из корзины</button>
             `;

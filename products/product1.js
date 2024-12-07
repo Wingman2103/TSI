@@ -91,3 +91,49 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+function extractProductInfo() {
+    // Находим контейнер с информацией о товаре
+    const container = document.getElementById('game');
+
+    // Извлекаем данные
+    const name = container.querySelector('.product-header h1').textContent.trim();
+    const priceText = container.querySelector('.product-header .price').textContent.trim();
+    const price = parseInt(priceText.replace(/[^\d]/g, ''), 10); // Извлекаем только число
+    const mainImage = container.querySelector('.image-container #mainImage').getAttribute('src').replace('../', '');
+    const description = container.querySelector('.product-description p').textContent.trim();
+    const genres = Array.from(container.querySelectorAll('.genres span')).map(span => span.textContent.trim());
+
+    // Составляем JSON
+    const product = {
+        name: name,
+        price: price,
+        image: mainImage,
+        description: description,
+        genres: genres,
+        url: window.location.href // Добавляем текущий URL страницы
+    };
+
+    return product;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const buyButton = document.getElementById('buyButton');
+    const cartKey = 'cart'; // Ключ для localStorage
+
+    // Обработчик для кнопки "Купить"
+    buyButton.addEventListener('click', function () {
+        const product = extractProductInfo();
+
+        // Получаем текущую корзину из localStorage
+        let cart = JSON.parse(localStorage.getItem(cartKey)) || [];
+
+        // Добавляем товар в корзину
+        cart.push(product);
+
+        // Сохраняем обновленную корзину в localStorage
+        localStorage.setItem(cartKey, JSON.stringify(cart));
+
+        alert('Товар успешно добавлен в корзину!');
+    });
+});
