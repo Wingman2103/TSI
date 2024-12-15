@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Добавление товара</title>
+    <title>WINGMAN SHOP Добавление товара</title>
     <link rel="stylesheet" href="css\add_product.css">
 </head>
 <body>
@@ -22,59 +22,70 @@
         </nav>
     </header>
     <main>
-    <div class="form-container">
-        <h1>«Форма добавления товара»</h1>
-        <form id="addProductForm">
-            <label for="name">Наименование *</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="description">Описание</label>
-            <textarea id="description" name="description"></textarea>
-            
-            <label for="price">Цена *</label>
-            <input type="number" id="price" name="price" required min="0">
-            
-            <label for="quantity">Количество *</label>
-            <input type="number" id="quantity" name="quantity" required min="1">
-            
-            <label for="manufacturer">Производитель *</label>
-            <select id="manufacturer" name="manufacturer" required>
-                <option value="">Выберите</option>
-                <option value="Sony">Sony</option>
-                <option value="Microsoft">Microsoft</option>
-                <option value="Nintendo">Nintendo</option>
-            </select>
-            
-            <label for="category">Категория *</label>
-            <select id="category" name="category" required>
-                <option value="">Выберите</option>
-                <option value="Экшен">Экшен</option>
-                <option value="RPG">RPG</option>
-                <option value="Симуляторы">Симуляторы</option>
-            </select>
-            
-            <label for="platform">Платформа *</label>
-            <select id="platform" name="platform" required>
-                <option value="">Выберите</option>
-                <option value="PlayStation">PlayStation</option>
-                <option value="Xbox">Xbox</option>
-                <option value="PC">PC</option>
-            </select>
-            
-            <label for="supplier">Поставщик *</label>
-            <select id="supplier" name="supplier" required>
-                <option value="">Выберите</option>
-                <option value="ООО «ИгроМир»">ООО «ИгроМир»</option>
-                <option value="ЗАО «Геймеры»">ЗАО «Геймеры»</option>
-            </select>
+        <div class="form-container">
+            <h1>«Форма добавления товара»</h1>
+            <form id="addProductForm">
+                <label for="name">Наименование *</label>
+                <p class="hint">Длина должна быть от 5 до 20 символов.</p>
+                <input type="text" id="name" name="name" required minlength="5" maxlength="20" placeholder="Введите название товара">
+                
 
-            <label for="image">Загрузите изображение:</label>
-            <input type="file" id="image" accept="image/*" required>
-            
-            <button type="submit">Добавить товар</button>
-        </form>
-    </div>
-</main>
+                <label for="description">Описание</label>
+                <p class="hint">Длина должна быть от 20 до 100 символов.</p>
+                <textarea id="description" name="description" required minlength="20" maxlength="100" placeholder="Краткое описание товара"></textarea>
+                
+
+                <label for="price">Цена *</label>
+                <p class="hint">Укажите цену в рублях (должна быть больше 0).</p>
+                <input type="number" id="price" name="price" required min="0" placeholder="Введите цену в рублях">
+                
+
+                <label for="quantity">Количество *</label>
+                <p class="hint">Минимальное количество: 1.</p>
+                <input type="number" id="quantity" name="quantity" required min="1" placeholder="Введите количество">
+                
+
+                <label for="manufacturer">Производитель *</label>
+                <p class="hint">Выберите производителя из списка.</p>
+                <select id="manufacturer" name="manufacturer" required>
+                    <option value="">Выберите</option>
+                    <option value="Sony">Sony</option>
+                    <option value="Microsoft">Microsoft</option>
+                    <option value="Nintendo">Nintendo</option>
+                </select>
+                
+
+                <label for="category">Категория *</label>
+                <p class="hint">Выберите категорию товара.</p>
+                <select id="category" name="category" required>
+                    <option value="">Выберите</option>
+                    <option value="Экшен">Экшен</option>
+                    <option value="RPG">RPG</option>
+                    <option value="Симуляторы">Симуляторы</option>
+                </select>
+                
+
+                <label for="phone">Номер телефона *</label>
+                <p class="hint">Формат ввода: +7 (123) 456-78-90.</p>
+                <input type="tel" id="phone" name="phone" required placeholder="+7 (123) 456-78-90" 
+                       pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" title="Формат: +7 (123) 456-78-90">
+                
+
+                <label for="email">Электронная почта *</label>
+                <p class="hint">Введите корректный email в формате example@domain.com.</p>
+                <input type="email" id="email" name="email" required placeholder="Введите ваш email"
+                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Формат: example@domain.com">
+                
+
+                <label for="image">Загрузите изображение:</label>
+                <p class="hint">Файл должен быть изображением (png, jpg, jpeg).</p>
+                <input type="file" id="image" accept="image/*" required>
+                
+
+                <button type="submit">Добавить товар</button>
+            </form>
+        </div>
+    </main>
     <footer>
         <a id="scrollTop" title="Наверх">↑</a>
         <h2 id="contact">Контакты</h2>
@@ -84,3 +95,4 @@
     <script src="js/add_product.js"></script>
 </body>
 </html>
+

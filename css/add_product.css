@@ -28,11 +28,19 @@ nav ul li a {
 }
   
 .logo {
-    width: 100px; /* Устанавливаем ширину логотипа */
-    height: 100px; /* Автоматическая высота для сохранения пропорций */
+    width: 100px; 
+    height: 100px; 
     position: absolute; /* Позиционирование для размещения в углу */
-    top: 10px; /* Отступ сверху */
-    left: 10px; /* Отступ слева */
+    top: 10px; 
+    left: 10px; 
+}
+
+.hint {
+    font-size: 0.9rem; /* Размер текста чуть меньше стандартного */
+    color: #6c757d; /* Серый цвет текста */
+    margin-top: -8px; /* Уменьшаем расстояние между подсказкой и названием поля */
+    margin-bottom: 8px; /* Уменьшаем расстояние между подсказкой и самим полем */
+    display: block; /* Гарантируем, что подсказка отображается на новой строке */
 }
 
 .search-form {
@@ -115,11 +123,11 @@ nav ul li a {
     background-color: #1b1b1b;
 }
 
-/* Футер */
+
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 20px 0;
-    margin-top: auto; /* Гарантирует, что футер переместится вниз */
+    margin-top: auto; 
   }

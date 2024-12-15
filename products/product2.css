@@ -35,10 +35,10 @@ body {
     margin-bottom: 20px;
 }
 
-/* Основное изображение с соотношением 16:9 */
+
 .main-image {
-    width: 100%; /*Заполнить весь доступный контейнер*/
-    aspect-ratio: 16 / 9; /* Установить соотношение сторон */
+    width: 100%; 
+    aspect-ratio: 16 / 9; 
     object-fit: cover; /* Изображение обрезается, чтобы заполнить весь блок */
     border-radius: 8px;
     margin-bottom: 15px;
@@ -57,7 +57,7 @@ body {
 .thumbnail {
     width: 80px;
     height: 80px;
-    object-fit: cover; /* Обрезать изображение, если оно больше */
+    object-fit: cover; 
     border-radius: 4px;
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
@@ -200,16 +200,16 @@ body {
     margin: 5px;
 }
 
-/* Лупа */
+
 .image-container img.zoom-icon {
     position: absolute; /* Абсолютное позиционирование */
-    top: 5px; /* Отступ сверху */
-    right: 5px; /* Отступ справа */
-    width: 30px; /* Размер пиктограммы */
+    top: 5px;
+    right: 5px; 
+    width: 30px; 
     height: 30px;
     cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.8); /* Белый фон с прозрачностью */
-    border-radius: 50%; /* Круглая пиктограмма */
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 50%; 
     padding: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Лёгкая тень */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
 }

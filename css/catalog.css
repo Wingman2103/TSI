@@ -3,7 +3,7 @@ body {
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Высота экрана */
+  min-height: 100vh; 
 }
 
 header {
@@ -29,11 +29,11 @@ nav ul li a {
 }
 
 .logo {
-  width: 100px; /* Устанавливаем ширину логотипа */
-  height: 100px; /* Автоматическая высота для сохранения пропорций */
+  width: 100px; 
+  height: 100px; 
   position: absolute; /* Позиционирование для размещения в углу */
-  top: 10px; /* Отступ сверху */
-  left: 10px; /* Отступ слева */
+  top: 10px; 
+  left: 10px; 
 }
 
 main {
@@ -173,11 +173,10 @@ section {
   background-color: #1b1b1b;
 }
 
-/* Футер */
 footer {
   background-color: #333;
   color: white;
   text-align: center;
   padding: 20px 0;
-  margin-top: auto; /* Гарантирует, что футер переместится вниз */
+  margin-top: auto; 
 }

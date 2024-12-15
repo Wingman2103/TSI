@@ -99,7 +99,7 @@ function extractProductInfo() {
     // Извлекаем данные
     const name = container.querySelector('.product-header h1').textContent.trim();
     const priceText = container.querySelector('.product-header .price').textContent.trim();
-    const price = parseInt(priceText.replace(/[^\d]/g, ''), 10); // Извлекаем только число
+    const price = parseInt(priceText.replace(/[^\d]/g, ''), 10); 
     const mainImage = container.querySelector('.image-container #mainImage').getAttribute('src').replace('../', '');
     const description = container.querySelector('.product-description p').textContent.trim();
     const genres = Array.from(container.querySelectorAll('.genres span')).map(span => span.textContent.trim());

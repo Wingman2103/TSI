@@ -19,8 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
             behavior: 'smooth'
         });
 
-        // localStorage.clear();
-        // alert('localStorage очищен!');
+        localStorage.clear();
+        alert('localStorage очищен!');
     });
 
 });
@@ -50,12 +50,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // Добавляем ячейку в таблицу
         let lastRow = gamesTable.lastElementChild;
         if (!lastRow || lastRow.children.length === 3) {
-            // Если последняя строка пуста или уже заполнена, создаём новую строку
             const newRow = document.createElement('tr');
             newRow.appendChild(newCell);
             gamesTable.appendChild(newRow);
         } else {
-            // Иначе добавляем в последнюю строку
             lastRow.appendChild(newCell);
         }
     }
@@ -88,28 +86,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 function extractProductInfo(gameDiv) {
-    const name = gameDiv.querySelector('h3').textContent.trim(); // Извлечение названия игры
-    const image = gameDiv.querySelector('img').getAttribute('src'); // Извлечение URL изображения
-    const description = gameDiv.querySelector('p').textContent.trim(); // Полное описание
-    const priceMatch = description.match(/Цена:\s*(\d+)\s*руб\./); // Извлечение цены
-    const price = priceMatch ? parseInt(priceMatch[1], 10) : 0; // Парсинг цены
+    const name = gameDiv.querySelector('h3').textContent.trim();
+    const image = gameDiv.querySelector('img').getAttribute('src'); 
+    const description = gameDiv.querySelector('p').textContent.trim();
+    const priceMatch = description.match(/Цена:\s*(\d+)\s*руб\./); 
+    const price = priceMatch ? parseInt(priceMatch[1], 10) : 0; 
 
-     // Попробуем найти жанры вручную
      let genres = [];
      const genreStartIndex = description.indexOf("Жанры:");
      if (genreStartIndex !== -1) {
-         const genreText = description.substring(genreStartIndex + 6).split('.')[0]; // Берём строку после "Жанры:" до первой точки
-         genres = genreText.split(',').map(genre => genre.trim()); // Разделяем по запятой и убираем лишние пробелы
+         const genreText = description.substring(genreStartIndex + 6).split('.')[0]; 
+         genres = genreText.split(',').map(genre => genre.trim()); 
      }
 
-    // Составляем объект
+
     return {
         name: name,
         image: image,
-        description: description.split('Жанры:')[0].trim(), // Описание до списка жанров
-        genres: genres, // Массив жанров
-        price: price, // Цена
-        url: gameDiv.getAttribute('data-url') // URL товара
+        description: description.split('Жанры:')[0].trim(), 
+        genres: genres, 
+        price: price, 
+        url: gameDiv.getAttribute('data-url') 
     };
 }
 

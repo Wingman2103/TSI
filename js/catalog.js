@@ -76,7 +76,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function extractProductInfo(gameDiv) {
 
-  // Извлекаем данные из дочерних элементов
   const productName = gameDiv.querySelector('h3').textContent.trim();
   const productDescription = gameDiv.querySelector('.game-info p:nth-child(2)').textContent.trim();
   const productGenres = gameDiv.querySelector('.game-info p:nth-child(3)').textContent.replace('Жанр:', '').trim();
@@ -85,11 +84,10 @@ function extractProductInfo(gameDiv) {
   const productImage = gameDiv.querySelector('img').getAttribute('src');
   const productUrl = gameDiv.dataset.url;
 
-  // Создаем JSON объект
   const productJson = {
       name: productName,
       description: productDescription,
-      genres: productGenres.split(',').map(genre => genre.trim()), // Преобразуем строку в массив
+      genres: productGenres.split(',').map(genre => genre.trim()), 
       price: productPrice,
       image: productImage,
       url: productUrl
