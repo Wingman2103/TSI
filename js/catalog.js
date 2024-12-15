@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const gameElement = document.createElement('div');
     gameElement.classList.add('game');
     gameElement.setAttribute('data-url', product.url);
+    gameElement.setAttribute('data-genres', product.category);
+    gameElement.setAttribute('data-price', product.price);
     gameElement.innerHTML = `
                 <img src="${product.image}" alt="${product.name}" class="game-thumbnail">
                 <div class="game-info">
@@ -96,5 +98,85 @@ function extractProductInfo(gameDiv) {
   return productJson
 
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const categories = document.querySelectorAll(".category"); // Получаем все категории
+  const games = document.querySelectorAll(".game"); // Получаем все товары
+  const resetButton = document.getElementById("resetFilters"); // Кнопка сброса фильтров
+  const priceRange = document.getElementById("price-range"); // Ползунок для цены
+  const priceDisplay = document.getElementById("price-display"); // Текст, показывающий диапазон цены
+
+  let selectedCategories = []; // Массив выбранных категорий
+
+  // Обработчик для каждого элемента категории
+  categories.forEach(function (category) {
+      category.addEventListener("click", function (e) {
+          e.preventDefault(); // Отменяем стандартное поведение ссылки
+
+          // Убираем класс 'active' у всех категорий
+          category.classList.toggle("active");
+
+          const selectedCategory = category.getAttribute("data-category"); // Получаем выбранную категорию
+          if (category.classList.contains("active")) {
+              selectedCategories.push(selectedCategory); // Добавляем категорию в массив
+          } else {
+              selectedCategories = selectedCategories.filter(function (cat) {
+                  return cat !== selectedCategory;
+              }); // Убираем категорию из массива
+          }
+
+          filterGames(); // Применяем фильтрацию
+      });
+  });
+
+  // Обработчик для изменения значения ползунка
+  priceRange.addEventListener("input", function () {
+      const maxPrice = priceRange.value;
+      priceDisplay.textContent = `До ${maxPrice} руб.`;
+      filterGames(); // Применяем фильтрацию
+  });
+
+  // Обработчик для кнопки сброса фильтров
+  resetButton.addEventListener("click", function () {
+      // Снимаем выделение с категорий
+      categories.forEach(function (category) {
+          category.classList.remove("active");
+      });
+
+      // Сбрасываем ползунок
+      priceRange.value = 5000;
+      priceDisplay.textContent = "До 5000 руб.";
+
+      // Очищаем массив выбранных категорий
+      selectedCategories = [];
+
+      // Показываем все товары
+      games.forEach(function (game) {
+          game.style.display = "flex";
+      });
+  });
+
+  // Функция для фильтрации товаров по категориям и цене
+  function filterGames() {
+      const maxPrice = priceRange.value;
+
+      games.forEach(function (game) {
+          const gameGenres = game.getAttribute("data-genres").split(", ");
+          const gamePrice = parseInt(game.getAttribute("data-price"), 10);
+
+          const isCategoryMatch = selectedCategories.length === 0 || selectedCategories.some(category => gameGenres.includes(category));
+          const isPriceMatch = gamePrice <= maxPrice;
+
+          if (isCategoryMatch && isPriceMatch) {
+              game.style.display = "flex"; // Показываем товар
+          } else {
+              game.style.display = "none"; // Скрываем товар
+          }
+      });
+  }
+});
+
+
+
 
 

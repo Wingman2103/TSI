@@ -1,140 +1,95 @@
-/* Основной стиль страницы */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #f5f7fa, #c3cfe2);
-    color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
 }
 
-/* Контейнер */
-.about-container {
-    background: #fff;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    max-width: 900px;
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
     text-align: center;
 }
 
-/* Шапка с изображением */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 .header {
-    position: relative;
-    width: 100%;
-    height: 250px;
-    background: url('author-background.jpg') no-repeat center center/cover;
+    text-align: center;
 }
 
-.profile-pic {
-    width: 150px; /* Задать ширину */
-    height: 150px; /* Задать высоту */
+.header img {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    border: 5px solid #fff;
-    position: absolute;
-    bottom: -75px;
-    left: 50%;
-    transform: translateX(-50%);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    object-fit: cover; /* Обрезка лишнего содержимого, чтобы заполнить контейнер */
-    object-position: center; /* Центрировать обрезку */
 }
 
-
-/* Основная информация */
 .about-content {
-    padding: 100px 20px 20px;
-    padding: 100px 20px 20px;
+    margin-top: 20px;
+    text-align: center;
 }
 
 .about-content h1 {
     font-size: 2.5rem;
-    margin-bottom: 10px;
-    color: #333;
+    color: #0056b3;
 }
 
 .about-content h2 {
-    font-size: 1.2rem;
-    font-weight: 400;
-    margin-bottom: 20px;
-    color: #666;
+    font-size: 1.5rem;
+    color: #555;
 }
 
 .about-content p {
     font-size: 1rem;
     line-height: 1.6;
-    margin-bottom: 20px;
+    margin: 20px 0;
+    color: #555;
 }
 
 .about-content a {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 10px;
-    color: #fff;
-    background-color: #007bff;
+    color: #0056b3;
     text-decoration: none;
-    border-radius: 25px;
-    transition: background-color 0.3s ease;
 }
 
 .about-content a:hover {
-    background-color: #0056b3;
+    text-decoration: underline;
 }
 
-/* Секции контактов и навыков */
-.details {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
     padding: 20px 0;
-    border-top: 1px solid #eee;
-    width: 100%;
+    margin-top: auto; 
 }
 
-.details div {
-    text-align: center;
-    margin: 10px;
-}
-
-.details div h3 {
-    font-size: 1.2rem;
-    margin-bottom: 5px;
-}
-
-.details div p {
-    font-size: 1rem;
-    color: #666;
-}
-
-/* Нижняя часть страницы */
-.footer {
-    padding: 15px;
-    font-size: 0.9rem;
-    background: #f8f9fa;
-    color: #888;
-    text-align: center;
-    border-top: 1px solid #ddd;
-    width: 100%;
-}
-
-.about-content a, .back-button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 10px;
-    color: #fff;
-    background-color: #007bff;
-    text-decoration: none;
-    border-radius: 25px;
-    transition: background-color 0.3s ease;
-}
-
-.about-content a:hover, .back-button:hover {
-    background-color: #0056b3;
+.logo {
+    width: 100px;
+    height: 100px; 
+    position: absolute; 
+    top: 10px; 
+    left: 10px; 
 }

@@ -27,7 +27,6 @@ nav ul li a {
     text-decoration: none;
 }
 
-
 section {
     padding: 0; 
     margin: 10px;
@@ -40,7 +39,8 @@ section {
 }
 
 #H2 {
-    margin-left: 20px;
+    margin: 10px;
+    text-align: justify;
 }
 
 .games {
@@ -49,27 +49,53 @@ section {
     overflow: auto; 
 }
 
-.table-container table {
+.table-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+table {
     width: 100%; 
-    height: 100%; 
+    table-layout: fixed;  /* Устанавливаем фиксированное распределение */
     border-collapse: collapse; 
 }
 
+td {
+    padding: 10px;
+    text-align: center; /* Для выравнивания содержимого по центру */
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-radius: 8px;
+    background: #f9f9f9;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.game:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
 .game h3 {
-    margin: 0;
     font-size: 1.2rem;
+    margin: 10px 0;
 }
 
 .game p {
     white-space: pre-line;
-    margin: 0;
+    margin: 10px 0;
+    font-size: 0.9rem;
 }
 
 .buy-button {
     background-color: #007BFF;
     color: white;
     border: none;
-    margin: 10px;
+    margin: 10px 0;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
@@ -80,34 +106,13 @@ section {
     background-color: #0056b3;
 }
 
-
-.game {
-    margin: 20px 0;
-    border-radius: 8px;
-}
-
-.game:hover {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-}
-
-.game h3 {
-    margin: 10px;
-}
-
-.game p {
-    white-space: pre-line;
-    margin: 10px;
-}
-
-
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 20px 0;
     margin-top: auto; 
-  }
-  
+}
 
 .search-form {
     display: inline-block;
@@ -153,17 +158,18 @@ footer {
 }
 
 .image-container {
-    position: relative; 
-    display: inline-block;
-    margin: 5px;
+    width: 100%; /* Обеспечивает, что картинка занимает всю ширину контейнера */
+    position: relative;
+    padding-top: 56.25%; /* 16:9 соотношение сторон (9 / 16 = 0.5625) */
+    margin: 0;
 }
 
 .image-container img.thumbnail {
-    flex: 1;
-    width: 95%; 
-    object-fit: cover; 
-    margin: 15px;
-    display: block;
-    height: auto;
+    position: absolute;  /* Размещение изображения внутри контейнера */
+    top: 0;
+    left: 0;
+    width: 100%;  /* Заполняем всю ширину контейнера */
+    height: 100%; /* Заполняем всю высоту контейнера */
+    object-fit: cover;  /* Заполняем контейнер, сохраняя пропорции изображения */
     border-radius: 5px;
 }

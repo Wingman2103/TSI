@@ -17,7 +17,7 @@
             <li><a href="cart.html">Корзина</a></li>
             <li><a href="add_product.html">Добавить товар</a></li>
             <li><a href="faq.html">FAQ</a></li>
-            <li><a href="about.html">Об авторе</a></li>
+            <li><a href="about.html">О магазине</a></li>
         </ul>
     </nav>
 
@@ -27,20 +27,36 @@
     </form>
 
   </header>
-
+  <section id="catalog-description">
+    <p>
+      Добро пожаловать в каталог нашего магазина! Здесь вы найдете широкий выбор компьютерных игр для всех платформ, от популярных экшенов до увлекательных ролевых игр. Мы собрали только лучшие и актуальные игры, которые подойдут как новичкам, так и опытным игрокам. 
+    </p>
+    <p>
+      В нашем каталоге вы можете выбрать игры по жанрам, платформам и ценовому диапазону. Приятных покупок и наслаждайтесь миром увлекательных игр с WINGMAN SHOP!
+    </p>
+    </section>
     <main>
         <aside class="categories-menu">
             <h2>Категории</h2>
             <ul>
-                <li><a href="#">Экшен</a></li>
-                <li><a href="#">РПГ</a></li>
-                <li><a href="#">Стратегии</a></li>
-                <li><a href="#">Гонки</a></li>
-                <li><a href="#">Приключения</a></li>
+                <li><a href="#" class="category" data-category="Экшен">Экшен</a></li>
+                <li><a href="#" class="category" data-category="RPG">RPG</a></li>
+                <li><a href="#" class="category" data-category="Шутер">Шутер</a></li>
+                <li><a href="#" class="category" data-category="Мультиплеер">Мультиплеер</a></li>
+                <li><a href="#" class="category" data-category="Песочница">Песочница</a></li>
             </ul>
+
+            <!-- Ползунок для фильтрации по цене -->
+            <h3>Цена</h3>
+            <label for="price-range">Выберите диапазон цены:</label>
+            <input type="range" id="price-range" min="0" max="5000" value="0" step="100">
+            <p id="price-display">До 5000 руб.</p>
+
+            <button id="resetFilters" class="reset-button">Сбросить фильтры</button>
         </aside>
+        
         <section class="product-list">
-            <div class="game" data-url="products/product1.html">
+            <div class="game" data-url="products/product1.html" data-genres="Мультиплеер, Шутер" data-price="1000">
                 <img src="images/product1_1.jpg" alt="Игра 1" class="game-thumbnail">
                 <div class="game-info">
                     <h3>GTA V</h3>
@@ -50,27 +66,27 @@
                 </div>
                 <button class="buy-button">Купить</button>
             </div>
-            <div class="game" data-url="products/product2.html">
+            <div class="game" data-url="products/product2.html" data-genres="Песочница, RPG" data-price="2000">
                 <img src="images/product2_1.jpg" alt="Игра 2" class="game-thumbnail">
                 <div class="game-info">
                     <h3>Minecraft</h3>
                     <p>Кубический мир для настоящих творцов.</p>
-                    <p>Жанр: Песочница, открытый мир</p>
+                    <p>Жанр: Песочница, RPG</p>
                     <p>Цена: 2000 руб.</p>
                 </div>
                 <button class="buy-button">Купить</button>
             </div>
-            <div class="game" data-url="products/product2.html">
+            <div class="game" data-url="products/product3.html" data-genres="RPG" data-price="500">
                 <img src="images/product3_1.jpg" alt="Игра 3" class="game-thumbnail">
                 <div class="game-info">
                     <h3>Dota 2</h3>
                     <p>Волшебные баталии за трон.</p>
-                    <p>Жанр: MOBA</p>
+                    <p>Жанр: RPG</p>
                     <p>Цена: 500 руб.</p>
                 </div>
                 <button class="buy-button">Купить</button>
             </div>
-            <div class="game" data-url="products/product2.html">
+            <div class="game" data-url="products/product4.html" data-genres="Шутер, Мультиплеер" data-price="1500">
                 <img src="images/product4_1.jpg" alt="Игра 4" class="game-thumbnail">
                 <div class="game-info">
                     <h3>Counter Strike 2</h3>
@@ -80,27 +96,28 @@
                 </div>
                 <button class="buy-button">Купить</button>
             </div>
-            <div class="game" data-url="products/product2.html">
+            <div class="game" data-url="products/product5.html" data-genres="Шутер, Королевская битва" data-price="1000">
                 <img src="images/product5_1.jpg" alt="Игра 5" class="game-thumbnail">
                 <div class="game-info">
-                    <h3>Apex legends</h3>
+                    <h3>Apex Legends</h3>
                     <p>Королевская битва в мире будущего от первого лица.</p>
                     <p>Жанр: Шутер, королевская битва</p>
                     <p>Цена: 1000 руб.</p>
                 </div>
                 <button class="buy-button">Купить</button>
             </div>
-            <div class="game" data-url="products/product2.html">
+            <div class="game" data-url="products/product6.html" data-genres="Шутер, Мультиплеер" data-price="1500">
                 <img src="images/product6_1.jpg" alt="Игра 6" class="game-thumbnail">
                 <div class="game-info">
                     <h3>Overwatch</h3>
-                    <p>Фантастический команды шутер от первого лица.</p>
+                    <p>Фантастический командный шутер от первого лица.</p>
                     <p>Жанр: Шутер, мультиплеер</p>
                     <p>Цена: 1500 руб.</p>
                 </div>
                 <button class="buy-button">Купить</button>
             </div>
         </section>
+        
     </main>
     <button id="scrollTop" title="Наверх">↑</button>
     <script src="js\catalog.js"></script>

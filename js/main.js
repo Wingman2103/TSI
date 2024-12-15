@@ -18,9 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
             top: 0,
             behavior: 'smooth'
         });
-
-        localStorage.clear();
-        alert('localStorage очищен!');
     });
 
 });
@@ -40,9 +37,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     <img src="${product.image}" alt="${product.name}" class="thumbnail">
                 </div>
                 <h3>${product.name}</h3>
-                <p>Описание: ${product.description}
-                Жанры: ${product.category}.
-                Цена: ${product.price} руб.</p>
+                <p>${product.description}</p>
+                <p><strong>Жанры:</strong> ${product.category}.</p>
+                <p><strong>Цена:</strong> ${product.price} руб.</p>
                 <button class="buy-button">Купить</button>
             </div>
         `;
