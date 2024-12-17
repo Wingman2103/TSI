@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация</title>
+    <style>
+        /* Стили для общего оформления */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(120deg, #3498db, #8e44ad);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Контейнер для формы */
+        .auth-container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            padding: 40px 30px;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .auth-container h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .auth-container form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .auth-container label {
+            font-size: 14px;
+            color: #555;
+            text-align: left;
+            margin-bottom: 5px;
+        }
+
+        .auth-container input[type="text"],
+        .auth-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .auth-container button {
+            background: #3498db;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s ease;
+        }
+
+        .auth-container button:hover {
+            background: #2980b9;
+        }
+
+        .auth-container .forgot-password {
+            font-size: 14px;
+            color: #3498db;
+            text-decoration: none;
+            margin-top: 10px;
+            display: block;
+        }
+
+        .auth-container .forgot-password:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="auth-container">
+        <h1>Авторизация</h1>
+        <form action="auth_handler.php" method="POST">
+            <div>
+                <label for="username">Имя пользователя</label>
+                <input type="text" id="username" name="username" placeholder="Введите ваше имя" required>
+            </div>
+            <div>
+                <label for="password">Пароль</label>
+                <input type="password" id="password" name="password" placeholder="Введите ваш пароль" required>
+            </div>
+            <button type="submit">Войти</button>
+        </form>
+        <a href="#" class="forgot-password">Забыли пароль?</a>
+    </div>
+</body>
+</html>
