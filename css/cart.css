@@ -147,3 +147,10 @@ footer {
   background-color: #1b1b1b;
 }
 
+#contact {
+  font-size: 1.5em; 
+  font-weight: bold; 
+  margin: 0.67em 0; 
+  line-height: 1.2; 
+}
+

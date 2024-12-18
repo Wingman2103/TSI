@@ -7,6 +7,21 @@
     <link rel="stylesheet" href="product2.css">
 </head>
 <body>
+    <header>
+        <img src="../images/logo.jpg" alt="Логотип" class="logo">
+        <p>WINGMAN SHOP</p>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html">Главная</a></li>
+                <li><a href="../catalog.html">Каталог</a></li>
+                <li><a href="../cart.html">Корзина</a></li>
+                <li><a href="../add_product.html">Добавить товар</a></li>
+                <li><a href="../faq.html">FAQ</a></li>
+                <li><a href="../about.html">О магазине</a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
         <div class="modal" id="imageModal">
             <span class="close" id="closeModal">&times;</span>
@@ -17,18 +32,18 @@
             <a href="#" class="back-button" onclick="history.back(); return false;">← Назад</a>
             <div class="product-header">
                 <h1>Minecraft</h1>
-                <div class="price">2000 руб.</div>
+                <p class="price">2000 руб.</p>
             </div>
             <div class="product-gallery">
                     <div class="image-container">
-                        <img id="mainImage" src="../images/product2_1.jpg" alt="GTA Main" class="main-image">
+                        <img id="mainImage" src="../images/product2_1.jpg" alt="Minecraft preview image" class="main-image">
                         <img src="../images/zoom.png" alt="Лупа" class="zoom-icon" id="zoomIcon" data-large="../images/product2_1.jpg">
                     </div>
                 <div class="thumbnails">
-                    <img src="../images/product2_1.jpg" alt="Изображение 1" class="thumbnail">
-                    <img src="../images/product2_2.jpg" alt="Изображение 2" class="thumbnail">
-                    <img src="../images/product2_3.jpg" alt="Изображение 3" class="thumbnail">
-                    <img src="../images/product2_4.jpg" alt="Изображение 4" class="thumbnail">
+                    <img src="../images/product2_1.jpg" alt="Minecraft preview image 1" class="thumbnail">
+                    <img src="../images/product2_2.jpg" alt="Minecraft preview image 2" class="thumbnail">
+                    <img src="../images/product2_3.jpg" alt="Minecraft preview image 3" class="thumbnail">
+                    <img src="../images/product2_4.jpg" alt="Minecraft preview image 4" class="thumbnail">
                 </div>
             </div>
             <div class="product-description">
@@ -40,10 +55,10 @@
                 <p>Minecraft — это больше, чем просто игра. Это платформа для творчества и самовыражения, способная вдохновить как детей, так и взрослых.</p>
             </div>
             <div class="genres">
-                <h3>Жанры:</h3>
-                <span>Песочница</span>
-                <span>Кооператив</span>
-                <span>Открытый мир</span>
+                <h2>Жанры:</h2>
+                <p><span>Песочница</span></p>
+                <p><span>Кооператив</span></p>
+                <p><span>Открытый мир</span></p>
             </div>
             <div class="buy-section">
                 <button id="buyButton" class="buy-button">Купить</button>
@@ -57,6 +72,11 @@
             </div>
         </div>
     </main>
+    <footer>
+        <p id="contact">Контакты</p>
+        <p>Email: support@wingmanstore.com</p>
+        <p>Телефон: +7 (123) 456-78-90</p>
+    </footer>
     <button id="scrollTop" title="Наверх">↑</button>
     
     <script src="product2.js"></script>

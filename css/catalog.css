@@ -243,3 +243,10 @@ footer {
 .reset-button:hover {
   background-color: #3926e0; /* Темнее красный при наведении */
 }
+
+#contact {
+  font-size: 1.5em; 
+  font-weight: bold; 
+  margin: 0.67em 0; 
+  line-height: 1.2; 
+}

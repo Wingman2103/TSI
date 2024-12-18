@@ -45,6 +45,11 @@ section {
     height: 100%; 
 }
 
+#H1 {
+    margin: 10px;
+    text-align: justify;
+}
+
 #H2 {
     margin: 10px;
     text-align: justify;
@@ -179,4 +184,11 @@ footer {
     height: 100%; /* Заполняем всю высоту контейнера */
     object-fit: cover;  /* Заполняем контейнер, сохраняя пропорции изображения */
     border-radius: 5px;
+}
+
+#contact {
+    font-size: 1.5em; 
+    font-weight: bold; 
+    margin: 0.67em 0; 
+    line-height: 1.2; 
 }
